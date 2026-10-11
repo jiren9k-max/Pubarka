@@ -1,6 +1,11 @@
 # Pub Arka Sarajevo · Pubarka.ba
 
-A responsive one-page website for Pub Arka in Sarajevo, built with static HTML, CSS, and JavaScript. It can be hosted without a build step.
+A responsive one-page website for Pub Arka in Sarajevo, built with static HTML, CSS, and JavaScript. It can be hosted without a build step. Pushing to `main` deploys to production on Vercel.
+
+## Structure
+
+- `index.html`, `styles.css`, `script.js` — the current site (arch-themed design, October 2026).
+- `pubarka 1/` — backup of the previous version of the site. It opens on its own and is excluded from the Vercel deploy via `.vercelignore`.
 
 ## Preview
 
@@ -8,8 +13,9 @@ Open `index.html` in a browser or serve this folder with a static web server.
 
 ## Content notes
 
-- Address, telephone, email, and opening hours are shown as published on Pub Arka's public Facebook and Instagram profiles. Verify them before a production launch in case they change.
-- Current promotions and the detailed menu are linked to Instagram instead of being guessed on the site.
-- Site photography is generated for this project to match the burgundy, dark wood, and amber lighting in the social profile. The original social profile links are included for current photos and announcements.
-- Responsive JPEG `srcset` variants are used for the hero, coffee-and-beer, and live-music images; the larger PNG originals are retained in `assets/images/` but are not loaded by the page.
+- Address, telephone, email, and opening hours are shown as published on Pub Arka's public Facebook and Instagram profiles. The same hours drive the live "Otvoreno / Zatvoreno" status in `script.js` and the structured data in `index.html` — update all three together.
+- Draught beer prices are taken from the chalkboard in front of the pub (see `assets/images/pubarka-frontage.jpg`). Verify the prices and glass size whenever the board changes.
+- Coffee and food are described without prices; current promotions are linked to Instagram.
+- `pubarka-frontage.jpg` and `pubarka-tuborg.jpg` are real photos of the pub. `pubarka-live-music.jpg` (the Atmosfera section) is generated and should be replaced with a real photo from a live night.
+- The larger PNG originals and unused JPEG variants in `assets/images/` are not loaded by the page.
 - Domain and Open Graph metadata use `pubarka.ba`.
