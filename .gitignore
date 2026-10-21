@@ -1,2 +1,3 @@
 .vercel/
 assets/images/*.png
+!assets/images/arka-logo-*.png

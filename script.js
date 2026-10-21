@@ -88,4 +88,60 @@ const updateStatus = () => {
 updateStatus();
 setInterval(updateStatus, 60 * 1000);
 
+// Album lightbox: click a photo to open it full size, then arrows / swipe / Esc.
+const lightbox = document.querySelector("[data-lightbox]");
+const galleryLinks = [...document.querySelectorAll("[data-gallery] a")];
+if (lightbox && galleryLinks.length && typeof lightbox.showModal === "function") {
+  const image = lightbox.querySelector("[data-lightbox-img]");
+  const caption = lightbox.querySelector("[data-lightbox-caption]");
+  const count = lightbox.querySelector("[data-lightbox-count]");
+  let current = 0;
+
+  const show = (index) => {
+    current = (index + galleryLinks.length) % galleryLinks.length;
+    const link = galleryLinks[current];
+    image.src = link.href;
+    image.alt = link.querySelector("img").alt;
+    caption.textContent = link.dataset.caption;
+    count.textContent = `${current + 1} / ${galleryLinks.length}`;
+    // Restart the fade-in on each change.
+    image.style.animation = "none";
+    void image.offsetWidth;
+    image.style.animation = "";
+  };
+
+  galleryLinks.forEach((link, index) =>
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      show(index);
+      lightbox.showModal();
+      document.body.classList.add("lightbox-open");
+    }),
+  );
+
+  lightbox.addEventListener("close", () => {
+    document.body.classList.remove("lightbox-open");
+    galleryLinks[current].focus();
+  });
+  lightbox.querySelector("[data-lightbox-close]").addEventListener("click", () => lightbox.close());
+  lightbox.querySelector("[data-lightbox-prev]").addEventListener("click", () => show(current - 1));
+  lightbox.querySelector("[data-lightbox-next]").addEventListener("click", () => show(current + 1));
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+  lightbox.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") show(current - 1);
+    if (event.key === "ArrowRight") show(current + 1);
+  });
+
+  let touchX = null;
+  lightbox.addEventListener("touchstart", (event) => (touchX = event.touches[0].clientX), { passive: true });
+  lightbox.addEventListener("touchend", (event) => {
+    if (touchX === null) return;
+    const dx = event.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+    touchX = null;
+  });
+}
+
 document.querySelectorAll("[data-year]").forEach((element) => (element.textContent = String(new Date().getFullYear())));

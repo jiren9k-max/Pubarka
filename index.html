@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#140c0c" />
     <title>Pub Arka · Sarajevo — kafa od jutra, hladno točeno do kasno</title>
-    <meta name="description" content="Pub Arka, Džemala Bijedića 279K, Sarajevo. Jutarnja kafa, sedam piva na točenju, live svirke i dobro društvo. Pon–Sub 08:00–23:30, Ned 15:00–23:30." />
+    <meta name="description" content="Pub Arka, Džemala Bijedića 279K, Sarajevo. Jutarnja kafa, piva na točenju, utakmice, live svirke i dobro društvo. Pon–Sub 08:00–23:30, Ned 15:00–23:30." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Pub Arka · Sarajevo — Svrati. Ostani." />
-    <meta property="og:description" content="Kafa od jutra, hladno točeno do kasno, muzika i dobro društvo. Džemala Bijedića 279K, Sarajevo." />
+    <meta property="og:description" content="Kafa od jutra, hladno točeno do kasno, utakmice, muzika i dobro društvo. Džemala Bijedića 279K, Sarajevo." />
     <meta property="og:url" content="https://pubarka.ba/" />
-    <meta property="og:image" content="https://pubarka.ba/assets/images/pubarka-frontage.jpg" />
+    <meta property="og:image" content="https://pubarka.ba/assets/images/og-pub-arka.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +26,8 @@
         "@type": "BarOrPub",
         "name": "Pub Arka",
         "url": "https://pubarka.ba/",
-        "image": "https://pubarka.ba/assets/images/pubarka-frontage.jpg",
+        "logo": "https://pubarka.ba/assets/images/arka-logo-960.png",
+        "image": ["https://pubarka.ba/assets/images/og-pub-arka.jpg", "https://pubarka.ba/assets/images/album/arka-sank-lg.jpg"],
         "telephone": "+38733875614",
         "email": "pubarka@hotmail.com",
         "address": {
@@ -46,18 +49,15 @@
     <a class="skip-link" href="#main">Preskoči na sadržaj</a>
 
     <header class="site-header" data-header>
-      <a class="logo" href="#top" aria-label="Pub Arka — početna">
-        <svg class="logo-mark" viewBox="0 0 40 48" aria-hidden="true">
-          <path d="M3 47V20a17 17 0 0 1 34 0v27" fill="none" stroke="currentColor" stroke-width="1.4" />
-          <text x="20" y="38" text-anchor="middle">A</text>
-        </svg>
-        <span class="logo-word">Pub Arka<small>Sarajevo</small></span>
+      <a class="logo" href="#top" aria-label="Arka Pub — početna">
+        <img src="assets/images/arka-logo-480.png" srcset="assets/images/arka-logo-480.png 1x, assets/images/arka-logo-960.png 2x" width="132" height="48" alt="Arka Pub" />
       </a>
 
       <nav class="nav" id="nav" aria-label="Glavna navigacija" data-nav>
         <a href="#prica">Priča</a>
         <a href="#ponuda">Ponuda</a>
         <a href="#atmosfera">Atmosfera</a>
+        <a href="#album">Album</a>
         <a href="#posjeta">Posjeta</a>
         <a class="nav-mobile-only" href="tel:+38733875614">+387 33 875 614</a>
       </nav>
@@ -76,7 +76,7 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="kicker reveal"><span class="kicker-rule"></span>Pub · Kafa · Muzika — Sarajevo</p>
+            <p class="kicker reveal"><span class="kicker-rule"></span>Pub · Kafa · Sport · Muzika — Sarajevo</p>
             <h1 id="hero-title" class="reveal">Svrati.<br /><em>Ostani.</em></h1>
             <p class="hero-lead reveal">Kafa od jutra, hladno točeno do kasno i društvo zbog kojeg „neću dugo“ rijetko bude plan.</p>
             <div class="hero-actions reveal">
@@ -93,16 +93,16 @@
           <div class="hero-visual reveal">
             <div class="arch-frame">
               <div class="arch">
-                <img src="assets/images/pubarka-frontage.jpg" width="960" height="720" alt="Ulaz u Pub Arku navečer: bačve ispred izloga, neonski natpisi unutra i tabla s cijenama točenog piva." fetchpriority="high" />
+                <img src="assets/images/album/arka-sank-800.jpg" width="800" height="1428" alt="Šank Pub Arke: točionici na drvenim bačvama, a iznad njih boce na dozatorima." fetchpriority="high" />
               </div>
             </div>
             <svg class="seal" viewBox="0 0 160 160" aria-hidden="true">
               <defs><path id="seal-path" d="M80 80m-60 0a60 60 0 1 1 120 0a60 60 0 1 1-120 0" /></defs>
               <circle cx="80" cy="80" r="76" />
-              <text><textPath href="#seal-path">PUB ARKA · SARAJEVO · HLADNO TOČENO · KAFA OD JUTRA ·</textPath></text>
+              <text><textPath href="#seal-path" textLength="372" lengthAdjust="spacing">PUB ARKA · SARAJEVO · HLADNO TOČENO ·</textPath></text>
               <g class="seal-star"><text x="80" y="92" text-anchor="middle">✳</text></g>
             </svg>
-            <p class="hero-caption">Ispred Arke · Džemala Bijedića 279K</p>
+            <p class="hero-caption">Šank Arke · Džemala Bijedića 279K</p>
           </div>
         </div>
         <a class="scroll-cue" href="#prica" aria-label="Skrolaj na priču"><span></span></a>
@@ -111,8 +111,8 @@
       <!-- MARQUEE -->
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span>Hladno točeno</span><i>✳</i><span>Kafa od jutra</span><i>✳</i><span>Live svirke</span><i>✳</i><span>Kvizovi</span><i>✳</i><span>Tematske večeri</span><i>✳</i><span>Dobro društvo</span><i>✳</i>
-          <span>Hladno točeno</span><i>✳</i><span>Kafa od jutra</span><i>✳</i><span>Live svirke</span><i>✳</i><span>Kvizovi</span><i>✳</i><span>Tematske večeri</span><i>✳</i><span>Dobro društvo</span><i>✳</i>
+          <span>Hladno točeno</span><i>✳</i><span>Kafa od jutra</span><i>✳</i><span>Utakmice</span><i>✳</i><span>Live svirke</span><i>✳</i><span>Kvizovi</span><i>✳</i><span>Dobro društvo</span><i>✳</i>
+          <span>Hladno točeno</span><i>✳</i><span>Kafa od jutra</span><i>✳</i><span>Utakmice</span><i>✳</i><span>Live svirke</span><i>✳</i><span>Kvizovi</span><i>✳</i><span>Dobro društvo</span><i>✳</i>
         </div>
       </div>
 
@@ -124,7 +124,14 @@
             <h2 id="story-title" class="reveal">Od prve kafe<br />do zadnje <em>priče.</em></h2>
           </div>
           <div class="story-body">
-            <p class="lead reveal">Pub Arka je sarajevsko mjesto za jutarnju kafu, hladno točeno i večeri uz muziku. Svrati zbog jednog — ostatak večeri ćemo lako.</p>
+            <div class="story-intro">
+              <p class="lead reveal">Pub Arka je sarajevsko mjesto za jutarnju kafu, hladno točeno, utakmice i večeri uz muziku. Svrati zbog jednog — ostatak večeri ćemo lako.</p>
+              <figure class="story-photo reveal">
+                <div class="arch">
+                  <img src="assets/images/album/arka-kafa-800.jpg" width="800" height="1201" alt="Cappuccino sa srcem od mlijeka u crvenoj šoljici, u rukama gošće, ispred cvijeća." loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ol class="pillars">
               <li class="pillar reveal">
                 <span class="pillar-time">Od 08:00</span>
@@ -134,12 +141,12 @@
               <li class="pillar reveal">
                 <span class="pillar-time">Popodne</span>
                 <h3>Hladno točeno</h3>
-                <p>Sedam piva na točenju — od Sarajevskog do Paulanera.</p>
+                <p>Pivo iz točionika na bačvama — hladno, svježe i kako treba.</p>
               </li>
               <li class="pillar reveal">
                 <span class="pillar-time">Do 23:30</span>
-                <h3>Muzika &amp; društvo</h3>
-                <p>Live svirke, kvizovi i tematske večeri. Ekipa se uvijek nađe.</p>
+                <h3>Sport &amp; društvo</h3>
+                <p>Utakmice na velikom ekranu, live svirke i kvizovi. Ekipa se uvijek nađe.</p>
               </li>
             </ol>
           </div>
@@ -161,7 +168,7 @@
             <figure class="menu-visual reveal">
               <div class="arch-frame arch-frame-light">
                 <div class="arch">
-                  <img src="assets/images/pubarka-tuborg.jpg" width="526" height="526" alt="Čaša hladnog točenog Tuborga u toplom svjetlu Pub Arke." loading="lazy" decoding="async" />
+                  <img src="assets/images/album/arka-tocenje-800.jpg" width="800" height="1200" alt="Konobar toči hladno pivo iz točionika na drvenoj bačvi u čašu." loading="lazy" decoding="async" />
                 </div>
               </div>
               <figcaption>Hladno. Točeno. Kako treba.</figcaption>
@@ -201,28 +208,59 @@
 
       <!-- ATMOSPHERE -->
       <section class="atmosphere" id="atmosfera" aria-labelledby="atmo-title">
-        <img class="atmosphere-bg" src="assets/images/pubarka-live-music.jpg" width="1200" height="900" alt="" loading="lazy" decoding="async" />
+        <img class="atmosphere-bg" src="assets/images/album/arka-utakmica-lg.jpg" srcset="assets/images/album/arka-utakmica-800.jpg 800w, assets/images/album/arka-utakmica-lg.jpg 1600w" sizes="100vw" width="1600" height="1200" alt="" loading="lazy" decoding="async" />
         <div class="container atmosphere-inner">
           <p class="index index-light reveal">03 — Atmosfera</p>
           <h2 id="atmo-title" class="reveal">Kad se ekipa skupi,<br />veče <em>krene.</em></h2>
           <div class="events">
             <article class="event reveal">
               <span class="event-num">I</span>
+              <h3>Utakmice</h3>
+              <p>Velike utakmice na velikom ekranu, uz šalove na plafonu i hladno točeno.</p>
+            </article>
+            <article class="event reveal">
+              <span class="event-num">II</span>
               <h3>Live svirke</h3>
               <p>Jazz i živa muzika uz koju se priča ne prekida.</p>
             </article>
             <article class="event reveal">
-              <span class="event-num">II</span>
+              <span class="event-num">III</span>
               <h3>Kvizovi</h3>
               <p>Za ekipe koje znaju sve — ili bar misle da znaju.</p>
             </article>
             <article class="event reveal">
-              <span class="event-num">III</span>
-              <h3>Tematske večeri</h3>
-              <p>Posebna druženja koja najavljujemo na našim profilima.</p>
+              <span class="event-num">IV</span>
+              <h3>Proslave</h3>
+              <p>Rođendani i posebna druženja, uz balone, muziku i dobru ekipu.</p>
             </article>
           </div>
           <a class="btn btn-brass reveal" href="https://www.instagram.com/pub_arka/" target="_blank" rel="noreferrer">Prati najave na Instagramu <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <!-- ALBUM -->
+      <section class="album section" id="album" aria-labelledby="album-title">
+        <div class="container">
+          <div class="section-head section-head-split">
+            <div>
+              <p class="index reveal">04 — Album</p>
+              <h2 id="album-title" class="reveal">Arka u <em>slikama.</em></h2>
+            </div>
+            <p class="section-note reveal">Šank, utakmice, proslave i jutarnja kafa — ovako izgleda dan u Arki. Klikni na sliku za veći prikaz.</p>
+          </div>
+
+          <ul class="gallery" data-gallery>
+            <li class="g-wide reveal"><a href="assets/images/album/arka-neon-lg.jpg" data-caption="Stop thinking, start drinking — naš neon"><img src="assets/images/album/arka-neon-800.jpg" width="800" height="600" alt="Neonski natpis „Stop thinking, start drinking“ na zidu od cigle." loading="lazy" decoding="async" /><span class="g-cap">Naš neon</span></a></li>
+            <li class="g-tall reveal"><a href="assets/images/album/arka-tocenje-lg.jpg" data-caption="Točeno iz bačve"><img src="assets/images/album/arka-tocenje-800.jpg" width="800" height="1200" alt="Točenje piva iz točionika na drvenoj bačvi." loading="lazy" decoding="async" /><span class="g-cap">Točeno iz bačve</span></a></li>
+            <li class="g-tall reveal"><a href="assets/images/album/arka-kafa-lg.jpg" data-caption="Jutarnja kafa"><img src="assets/images/album/arka-kafa-800.jpg" width="800" height="1201" alt="Cappuccino u crvenoj šoljici ispred cvijeća." loading="lazy" decoding="async" /><span class="g-cap">Jutarnja kafa</span></a></li>
+            <li class="g-tall reveal"><a href="assets/images/album/arka-sank-lg.jpg" data-caption="Šank"><img src="assets/images/album/arka-sank-800.jpg" width="800" height="1428" alt="Točionici na bačvama i boce na dozatorima iznad šanka." loading="lazy" decoding="async" /><span class="g-cap">Šank</span></a></li>
+            <li class="g-wide reveal"><a href="assets/images/album/arka-utakmica-lg.jpg" data-caption="Utakmica na velikom ekranu"><img src="assets/images/album/arka-utakmica-800.jpg" width="800" height="600" alt="Gosti u dresovima reprezentacije gledaju utakmicu na velikom ekranu, ispod šalova okačenih o plafon." loading="lazy" decoding="async" /><span class="g-cap">Utakmice</span></a></li>
+            <li class="g-tall reveal"><a href="assets/images/album/arka-proslava-lg.jpg" data-caption="Proslava u Arki"><img src="assets/images/album/arka-proslava-800.jpg" width="800" height="1141" alt="Četiri gošće u crvenim haljinama na proslavi, pored balona i neonskog natpisa." loading="lazy" decoding="async" /><span class="g-cap">Proslave</span></a></li>
+            <li class="g-band reveal"><a href="assets/images/album/arka-kutak-lg.jpg" data-caption="Naš kutak"><img src="assets/images/album/arka-kutak-800.jpg" width="800" height="559" alt="Kutak s tapaciranom sofom, neonom i balonima, spreman za proslavu." loading="lazy" decoding="async" /><span class="g-cap">Naš kutak</span></a></li>
+            <li class="g-tall reveal"><a href="assets/images/album/arka-runda-lg.jpg" data-caption="Runda za ekipu"><img src="assets/images/album/arka-runda-800.jpg" width="800" height="1201" alt="Konobar sipa runde rakije u čašice na poslužavniku." loading="lazy" decoding="async" /><span class="g-cap">Runda za ekipu</span></a></li>
+            <li class="g-tall reveal"><a href="assets/images/album/arka-vecer-lg.jpg" data-caption="Puna Arka"><img src="assets/images/album/arka-vecer-800.jpg" width="800" height="1067" alt="Pun pub navečer, s balonima i šalovima iznad gostiju." loading="lazy" decoding="async" /><span class="g-cap">Puna Arka</span></a></li>
+            <li class="g-band reveal"><a href="assets/images/pubarka-frontage.jpg" data-caption="Ulaz u Arku, Džemala Bijedića 279K"><img src="assets/images/pubarka-frontage.jpg" width="960" height="720" alt="Ulaz u Pub Arku navečer, s bačvama i tablom ponude ispred izloga." loading="lazy" decoding="async" /><span class="g-cap">Ulaz</span></a></li>
+          </ul>
         </div>
       </section>
 
@@ -241,7 +279,7 @@
       <section class="visit section" id="posjeta" aria-labelledby="visit-title">
         <div class="container visit-grid">
           <div class="visit-info">
-            <p class="index reveal">04 — Posjeta</p>
+            <p class="index reveal">05 — Posjeta</p>
             <h2 id="visit-title" class="reveal">Vidimo se<br /><em>u Arki.</em></h2>
             <span class="status status-pill reveal" data-open-status hidden></span>
 
@@ -275,7 +313,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="footer-word" aria-hidden="true">Pub <em>Arka</em></p>
+        <img class="footer-logo" src="assets/images/arka-logo-960.png" width="960" height="349" alt="Arka Pub" loading="lazy" decoding="async" />
         <div class="footer-cols">
           <div>
             <h4>Adresa</h4>
@@ -300,5 +338,15 @@
         </div>
       </div>
     </footer>
+
+    <dialog class="lightbox" aria-label="Album fotografija" data-lightbox>
+      <figure class="lightbox-figure">
+        <img alt="" data-lightbox-img />
+        <figcaption><span data-lightbox-caption></span><span class="lightbox-count" data-lightbox-count></span></figcaption>
+      </figure>
+      <button class="lightbox-btn lightbox-close" type="button" aria-label="Zatvori" data-lightbox-close>×</button>
+      <button class="lightbox-btn lightbox-prev" type="button" aria-label="Prethodna slika" data-lightbox-prev>←</button>
+      <button class="lightbox-btn lightbox-next" type="button" aria-label="Sljedeća slika" data-lightbox-next>→</button>
+    </dialog>
   </body>
 </html>
