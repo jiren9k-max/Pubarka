@@ -201,6 +201,7 @@ h2 { font-size: clamp(44px, 6.4vw, 96px); line-height: .98; }
 .mi-name em { display: block; margin-top: 3px; color: var(--on-dark-soft); font-size: 12.5px; font-style: normal; font-weight: 400; line-height: 1.5; }
 .leader { flex: 1; min-width: 14px; border-bottom: 1px dotted rgba(196, 154, 90, .4); transform: translateY(-4px); }
 .mi-price { color: var(--brass-light); font-family: var(--serif); font-size: 18px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mi-price small, .tap-table td small { margin-left: 1px; color: var(--brass); font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: .08em; }
 
 /* ---------- Atmosphere ---------- */
 .atmosphere { position: relative; isolation: isolate; min-height: 100svh; padding-block: clamp(300px, 34vw, 480px) clamp(80px, 9vw, 120px); display: flex; align-items: flex-end; overflow: hidden; color: var(--on-dark); }
