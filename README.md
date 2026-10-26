@@ -11,6 +11,8 @@ A responsive one-page website for Pub Arka in Sarajevo, built with static HTML, 
 
 Open `index.html` in a browser or serve this folder with a static web server.
 
+When you change `styles.css` or `script.js`, bump the `?v=` number on their links in `index.html` so browsers fetch the new version instead of a cached one.
+
 ## Content notes
 
 - Address, telephone, email, and opening hours are shown as published on Pub Arka's public Facebook and Instagram profiles. The same hours drive the live "Otvoreno / Zatvoreno" status in `script.js` and the structured data in `index.html` — update all three together.
