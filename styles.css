@@ -165,16 +165,42 @@ h2 { font-size: clamp(44px, 6.4vw, 96px); line-height: .98; }
 .board-head { margin-bottom: 10px; padding-bottom: 22px; display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line-dark); }
 .board-head h3 { font-size: clamp(32px, 3vw, 42px); }
 .board-head span { color: var(--brass); font-size: 12px; font-weight: 700; letter-spacing: .2em; }
-.beer-list li { padding-block: 16px; display: flex; align-items: flex-end; gap: 16px; border-bottom: 1px solid rgba(196, 154, 90, .1); transition: padding .35s var(--ease); }
-.beer-list li:hover { padding-left: 8px; }
-.beer { display: grid; gap: 2px; }
-.beer strong { font-family: var(--serif); font-size: clamp(20px, 1.8vw, 24px); font-weight: 400; line-height: 1.15; }
-.beer small { color: var(--on-dark-soft); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
-.leader { flex: 1; margin-bottom: 9px; border-bottom: 1px dotted rgba(196, 154, 90, .45); }
-.price { color: var(--brass-light); font-family: var(--serif); font-size: clamp(22px, 2vw, 27px); font-variant-numeric: tabular-nums; line-height: 1.2; }
-.menu-extras { margin: 34px 0 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-.menu-extras h4 { margin-bottom: 6px; font-family: var(--serif); font-size: 21px; font-weight: 400; }
-.menu-extras p { color: var(--on-dark-soft); font-size: 14px; }
+.tap-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.tap-table thead th { padding: 4px 0 14px 12px; color: var(--brass); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-align: right; text-transform: uppercase; }
+.tap-table thead th:first-child { padding-left: 0; text-align: left; }
+.tap-table tbody tr { border-top: 1px solid rgba(196, 154, 90, .14); transition: background .3s var(--ease); }
+.tap-table tbody tr:hover { background: rgba(196, 154, 90, .05); }
+.tap-table tbody th { padding: 15px 12px 15px 0; font-family: var(--serif); font-size: clamp(19px, 1.7vw, 23px); font-weight: 400; text-align: left; }
+.tap-table td { width: 17%; padding: 15px 0 15px 12px; color: var(--brass-light); font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); text-align: right; white-space: nowrap; }
+
+.specials { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.special { padding: 22px 22px 20px; border: 1px solid rgba(196, 154, 90, .35); background: linear-gradient(160deg, rgba(196, 154, 90, .14), rgba(196, 154, 90, .02)); }
+.special-tag { display: block; margin-bottom: 10px; color: var(--brass); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.special h4 { margin-bottom: 4px; font-family: var(--serif); font-size: 26px; font-weight: 400; }
+.special p { margin-bottom: 14px; color: var(--on-dark-soft); font-size: 14px; }
+.special-price { color: var(--brass-light); font-family: var(--serif); font-size: 30px; line-height: 1; }
+.special-price small { color: var(--brass); font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+
+.menu-full { margin-top: clamp(64px, 9vw, 120px); }
+.menu-full-head { margin-bottom: 26px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px 24px; }
+.menu-full-head h3 { font-size: clamp(32px, 3.4vw, 48px); }
+.menu-tabs { margin: 0 0 44px; padding-bottom: 4px; display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; }
+.menu-tabs::-webkit-scrollbar { display: none; }
+.menu-tabs button { flex: none; min-height: 46px; padding: 0 22px; border: 1px solid rgba(244, 236, 223, .2); border-radius: 999px; background: transparent; color: var(--on-dark-soft); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease); }
+.menu-tabs button:hover { border-color: var(--brass); color: var(--on-dark); }
+.menu-tabs button[aria-selected="true"] { border-color: var(--brass); background: var(--brass); color: var(--ink); }
+.menu-panel { columns: 3 280px; column-gap: clamp(32px, 4vw, 64px); }
+.menu-panel[hidden] { display: none; }
+.menu-panel:not([hidden]) { animation: panel-in .5s var(--ease); }
+@keyframes panel-in { from { opacity: 0; transform: translateY(10px); } }
+.menu-group { margin-bottom: 44px; break-inside: avoid; }
+.menu-group h4 { margin-bottom: 8px; padding-bottom: 12px; border-bottom: 1px solid var(--line-dark); color: var(--brass-light); font-family: var(--serif); font-size: 25px; font-style: italic; font-weight: 400; }
+.menu-items li { padding-block: 10px; display: flex; align-items: baseline; gap: 12px; border-bottom: 1px solid rgba(196, 154, 90, .08); }
+.mi-name { min-width: 0; font-size: 15px; font-weight: 600; line-height: 1.4; }
+.mi-name small { margin-left: 3px; color: var(--on-dark-soft); font-size: 12px; font-weight: 500; white-space: nowrap; }
+.mi-name em { display: block; margin-top: 3px; color: var(--on-dark-soft); font-size: 12.5px; font-style: normal; font-weight: 400; line-height: 1.5; }
+.leader { flex: 1; min-width: 14px; border-bottom: 1px dotted rgba(196, 154, 90, .4); transform: translateY(-4px); }
+.mi-price { color: var(--brass-light); font-family: var(--serif); font-size: 18px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* ---------- Atmosphere ---------- */
 .atmosphere { position: relative; isolation: isolate; min-height: 100svh; padding-block: clamp(300px, 34vw, 480px) clamp(80px, 9vw, 120px); display: flex; align-items: flex-end; overflow: hidden; color: var(--on-dark); }
@@ -324,7 +350,11 @@ body.lightbox-open { overflow: hidden; }
   .hero-actions .btn { flex: 1 1 auto; }
   .seal { left: -14px; bottom: 54px; width: 108px; height: 108px; }
   .menu-board { padding: 26px 20px; margin-inline: calc(var(--gutter) * -.5); }
-  .menu-extras { grid-template-columns: 1fr; gap: 20px; }
+  .specials { grid-template-columns: 1fr; }
+  .tap-table thead th { padding-left: 6px; letter-spacing: .1em; }
+  .tap-table tbody th { font-size: 17px; }
+  .tap-table td { padding-left: 6px; font-size: 17px; }
+  .menu-tabs { margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); }
   .contact li { grid-template-columns: 1fr; gap: 2px; }
   .contact a { font-size: 19px; }
   .visit-actions .btn { flex: 1 1 auto; }

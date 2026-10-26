@@ -88,6 +88,37 @@ const updateStatus = () => {
 updateStatus();
 setInterval(updateStatus, 60 * 1000);
 
+// Menu tabs. Without JS every panel stays visible.
+const menuTabs = [...document.querySelectorAll("[data-menu-tabs] [role='tab']")];
+if (menuTabs.length) {
+  const selectTab = (tab, focus) => {
+    menuTabs.forEach((other) => {
+      const selected = other === tab;
+      other.setAttribute("aria-selected", String(selected));
+      other.tabIndex = selected ? 0 : -1;
+      document.getElementById(other.getAttribute("aria-controls")).hidden = !selected;
+    });
+    if (focus) tab.focus({ preventScroll: true });
+    // Keep the active tab in view inside the horizontally scrolling tab row (mobile) without moving the page.
+    const row = tab.parentElement;
+    if (tab.offsetLeft < row.scrollLeft || tab.offsetLeft + tab.offsetWidth > row.scrollLeft + row.clientWidth) {
+      row.scrollTo({ left: tab.offsetLeft - 24, behavior: "smooth" });
+    }
+  };
+  menuTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectTab(tab, false));
+    tab.addEventListener("keydown", (event) => {
+      const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
+      if (!step) return;
+      event.preventDefault();
+      selectTab(menuTabs[(index + step + menuTabs.length) % menuTabs.length], true);
+    });
+  });
+  menuTabs.forEach((tab) => {
+    if (tab.getAttribute("aria-selected") !== "true") document.getElementById(tab.getAttribute("aria-controls")).hidden = true;
+  });
+}
+
 // Album lightbox: click a photo to open it full size, then arrows / swipe / Esc.
 const lightbox = document.querySelector("[data-lightbox]");
 const galleryLinks = [...document.querySelectorAll("[data-gallery] a")];
